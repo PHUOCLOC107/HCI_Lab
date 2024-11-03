@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Danh Sách Môn Học</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="container"><h1>Danh Sách Môn Học</h1>
+  <input type="text" id="searchInput" placeholder="Tìm kiếm môn học..." onkeyup="searchSubjects()">
+  <div class="grid-container">
+    <div class="grid-item">
+      Java
+      <a href="java.html"><span class="view-text">Xem</span></a>
+    </div>
+    <div class="grid-item">
+      C#
+      <a href="c.html"> <span class="view-text">Xem</span></a>
+    </div>
+    <div class="grid-item">
+      Python
+      <a href="python.html"><span class="view-text">Xem</span></a>
+    </div>
+    <div class="grid-item">
+      Cơ sở dữ liệu
+      <a href="csdl.html"><span class="view-text">Xem</span></a>
+    </div>
+    <div class="grid-item">
+      Mạng máy tính
+      <a href="mmt.html"><span class="view-text">Xem</span></a>
+    </div>
+    <div class="grid-item">
+      Tin học đại cương
+      <a href="thdc.html"><span class="view-text">Xem</span></a>
+    </div>
+    <div class="grid-item">
+      Lý thuyết đồ thị
+      <a href="Ltdt.html"><span class="view-text">Xem</span></a>
+    </div>
+    <div class="grid-item">
+      Lập trình cơ bản
+      <a href="ltcb.html"><span class="view-text">Xem</span></a>
+    </div>
+    <div class="grid-item">
+      Lập trình mạng
+      <a href="ltm.html"><span class="view-text">Xem</span></a>
+    </div>
+    <div class="grid-item">
+      Lập trình nâng cao
+      <a href="ltnc.html"><span class="view-text">Xem</span></a>
+    </div>
+    <div class="grid-item">
+      Toán rời rạc
+      <a href="trr.html"><span class="view-text">Xem</span></a>
+    </div>
+    <div class="grid-item">
+      Giao tiếp người - máy
+      <a href="gtnm.html"><span class="view-text">Xem</span></a>
+    </div>
+    <div class="grid-item">
+      Cấu trúc máy tính
+      <a href="ctmt.html"><span class="view-text">Xem</span></a>
+    </div>
+    <div class="grid-item">
+      Thiết kế hướng đối tượng
+      <a href="tkhdt.html"><span class="view-text">Xem</span></a>
+    </div>
+    <div class="grid-item">
+      Lập trình Wed
+      <a href="ltw.html"><span class="view-text">Xem</span></a>
+    </div>
+  </div></div>
+  <script>
+    function searchSubjects() {
+  const input = removeAccents(document.getElementById('searchInput').value.toLowerCase());
+  const items = document.querySelectorAll('.grid-item');
+
+  items.forEach(item => {
+    const subject = removeAccents(item.textContent.toLowerCase());
+    if (subject.includes(input)) {
+      item.style.display = 'block';
+    } else {
+      item.style.display = 'none';
+    }
+  });
+}
+
+function removeAccents(str) {
+  return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
+  </script>
+</body>
+</html>
