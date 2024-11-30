@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng Tin Câu Lạc Bộ Trường</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>/* Reset CSS */
+   /* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    background-color: #00695C;
+    color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+header .logo img {
+    height: 60px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #FFD700;
+}
+
+/* Main Content */
+main {
+    margin-top: 80px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.main-left {
+    width: 70%; /* chiếm phần lớn diện tích */
+}
+
+.main-right {
+    width: 28%; /* phần phụ bên phải */
+}
+
+/* Các bài tin - Card style */
+.news, .events {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-item, .event-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-item:hover, .event-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+h2, h3 {
+    color: #00695C;
+}
+
+.news h2, .events h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.news-item h3, .event-item h3 {
+    font-size: 22px;
+    color: #333;
+    font-weight: 600;
+}
+
+.date {
+    font-size: 14px;
+    color: #777;
+    margin: 5px 0;
+}
+
+.summary {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #00695C;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #FFD700;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    margin-bottom: 15px;
+}
+
+ul li h4 {
+    font-size: 20px;
+    color: #333;
+}
+
+ul li p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer a {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    .main-left, .main-right {
+        width: 100%;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+}
+
+    </style>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo-club.png" alt="Logo Câu Lạc Bộ">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Trang Chủ</a></li>
+                <li><a href="#about">Giới Thiệu</a></li>
+                <li><a href="#events">Sự Kiện</a></li>
+                <li><a href="#contact">Liên Hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="main-left">
+            <section class="news">
+                <h2>Bảng Tin Mới Nhất</h2>
+                <article class="news-item">
+                    <h3>Cuộc Thi Thể Thao Hằng Năm</h3>
+                    <p class="date">Ngày 15/12/2024</p>
+                    <p class="summary">Câu lạc bộ thể thao tổ chức cuộc thi thể thao hằng năm với các hoạt động thú vị và giải thưởng hấp dẫn.</p>
+                    <a href="#">Đọc Thêm</a>
+                </article>
+                <article class="news-item">
+                    <h3>Chương Trình Đào Tạo Lãnh Đạo</h3>
+                    <p class="date">Ngày 10/12/2024</p>
+                    <p class="summary">Chương trình đào tạo lãnh đạo cho các thành viên câu lạc bộ với sự tham gia của các chuyên gia.</p>
+                    <a href="#">Đọc Thêm</a>
+                </article>
+                
+                <article class="news-item">
+                    <h3>Các Lớp Học Kỹ Năng Mềm</h3>
+                    <p class="date">Ngày 28/11/2024</p>
+                    <p class="summary">Câu lạc bộ tổ chức các lớp học kỹ năng mềm dành cho các thành viên để nâng cao khả năng giao tiếp, lãnh đạo và quản lý thời gian.</p>
+                    <a href="#">Đọc Thêm</a>
+                </article>
+        
+                <!-- Bài tin 2 -->
+                <article class="news-item">
+                    <h3>Ngày Hội Sách Câu Lạc Bộ</h3>
+                    <p class="date">Ngày 30/11/2024</p>
+                    <p class="summary">Ngày hội sách sẽ được tổ chức với sự tham gia của các tác giả nổi tiếng và các hoạt động giao lưu, chia sẻ kinh nghiệm về đọc sách.</p>
+                    <a href="#">Đọc Thêm</a>
+                </article>
+        
+                <!-- Bài tin 3 -->
+                <article class="news-item">
+                    <h3>Chuyến Du Lịch Câu Lạc Bộ</h3>
+                    <p class="date">Ngày 5/12/2024</p>
+                    <p class="summary">Thành viên câu lạc bộ sẽ tham gia chuyến du lịch dã ngoại tại khu vực ngoại ô, nhằm gắn kết các thành viên trong câu lạc bộ.</p>
+                    <a href="#">Đọc Thêm</a>
+                </article>
+            </section>
+        </div>
+
+        <div class="main-right">
+            <section class="events" id="events">
+                <h2>Sự Kiện Sắp Tới</h2>
+                <ul>
+                    <li>
+                        <h4>Cuộc thi tranh biện</h4>
+                        <p>Ngày: 25/12/2024</p>
+                        <p>Thời gian: 9:00 AM</p>
+                    </li>
+                    <li>
+                        <h4>Lớp học kỹ năng lãnh đạo</h4>
+                        <p>Ngày: 28/12/2024</p>
+                        <p>Thời gian: 2:00 PM</p>
+                    </li>
+                    <!-- Thêm các sự kiện khác -->
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Câu Lạc Bộ Trường | Tất cả quyền được bảo vệ.</p>
+    </footer>
+</body>
+</html>
